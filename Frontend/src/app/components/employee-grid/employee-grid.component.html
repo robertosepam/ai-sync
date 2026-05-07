@@ -1,0 +1,33 @@
+<div class="employee-grid-container">
+  <h1>Employees</h1>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="!loading && !error">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.dateOfBirth | date:'mediumDate' }}</td>
+        <td>
+          <span class="status-badge" [ngClass]="employee.status ? 'status-active' : 'status-inactive'">
+            {{ employee.status ? 'Active' : 'Inactive' }}
+          </span>
+        </td>
+      </tr>
+      <tr *ngIf="employees.length === 0">
+        <td colspan="4" class="no-data">No employees found.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
