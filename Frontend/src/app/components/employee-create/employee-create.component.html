@@ -1,0 +1,56 @@
+<div class="employee-grid-container">
+  <h1>Create Employee</h1>
+
+  <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <!-- Name -->
+    <div class="form-field">
+      <label for="name">Name</label>
+      <input id="name"
+             type="text"
+             formControlName="name"
+             [class.input-error]="isInvalid('name')"
+             placeholder="Full name" />
+      <span class="field-error" *ngIf="isInvalid('name')">
+        <ng-container *ngIf="form.get('name')?.errors?.['required']">Name is required.</ng-container>
+        <ng-container *ngIf="form.get('name')?.errors?.['minlength']">Name must be at least 2 characters.</ng-container>
+        <ng-container *ngIf="form.get('name')?.errors?.['maxlength']">Name must not exceed 100 characters.</ng-container>
+      </span>
+    </div>
+
+    <!-- Date of Birth -->
+    <div class="form-field">
+      <label for="dateOfBirth">Date of Birth</label>
+      <input id="dateOfBirth"
+             type="date"
+             formControlName="dateOfBirth"
+             [max]="today"
+             [class.input-error]="isInvalid('dateOfBirth')" />
+      <span class="field-error" *ngIf="isInvalid('dateOfBirth')">
+        <ng-container *ngIf="form.get('dateOfBirth')?.errors?.['required']">Date of birth is required.</ng-container>
+        <ng-container *ngIf="form.get('dateOfBirth')?.errors?.['futureDate']">Date of birth cannot be in the future.</ng-container>
+      </span>
+    </div>
+
+    <!-- Status -->
+    <div class="form-field form-field--checkbox">
+      <label>
+        <input type="checkbox"
+               formControlName="status" />
+        Active
+      </label>
+      <span class="status-badge"
+            [ngClass]="form.get('status')?.value ? 'status-active' : 'status-inactive'">
+        {{ form.get('status')?.value ? 'Active' : 'Inactive' }}
+      </span>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-submit" [disabled]="loading">
+        {{ loading ? 'Saving...' : 'Create Employee' }}
+      </button>
+    </div>
+  </form>
+</div>

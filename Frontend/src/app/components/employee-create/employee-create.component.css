@@ -1,0 +1,112 @@
+.employee-grid-container {
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  max-width: 520px;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-field--checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+input[type='text'],
+input[type='date'] {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type='text']:focus,
+input[type='date']:focus {
+  border-color: #4a90d9;
+}
+
+input.input-error {
+  border-color: #721c24;
+}
+
+.field-error {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: #721c24;
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.form-actions {
+  margin-top: 8px;
+}
+
+.btn-submit {
+  background-color: #4a90d9;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #357abd;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
