@@ -13,7 +13,7 @@
   "packageManager": "npm@11.11.0",
   "dependencies": {
     "@angular/common": "^21.2.0",
-    "@angular/compiler": "^21.2.0",
+    "@angular/compiler": "^21.2.13",
     "@angular/core": "^21.2.0",
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
@@ -24,8 +24,8 @@
   "devDependencies": {
     "@analogjs/vitest-angular": "latest",
     "@angular/build": "^21.2.6",
-    "@angular/cli": "^21.2.6",
-    "@angular/compiler-cli": "^21.2.0",
+    "@angular/cli": "^21.2.11",
+    "@angular/compiler-cli": "^21.2.13",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",

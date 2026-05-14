@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { EmployeeService } from '../../services/employee.service';
 
+declare module '@angular/forms';
+
 function notInFutureValidator(control: AbstractControl): ValidationErrors | null {
   if (!control.value) return null;
   const selected = new Date(control.value);
