@@ -11,6 +11,9 @@
   <Folder Name="/Infrastructure/">
     <Project Path="src/AiSync.Infrastructure/AiSync.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/McpServer/">
+    <Project Path="src/AiSync.McpServer/AiSync.McpServer.csproj" />
+  </Folder>
   <Folder Name="/Tests/">
     <Project Path="src/AISync.UnitTests/AiSync.API.Tests/AiSync.API.Tests.csproj" />
     <Project Path="src/AISync.UnitTests/AiSync.Application.Tests/AiSync.Application.Tests.csproj" />
