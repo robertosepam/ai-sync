@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/AI-sync/v17/.wsuo
+/.vs/AI-sync/v17/DocumentLayout.json
+/Backend/.github/copilot-instructions.md
+/Frontend/.vs/Frontend/CopilotIndices/17.14.1661.41761
+/Frontend/.vs
+/.vs

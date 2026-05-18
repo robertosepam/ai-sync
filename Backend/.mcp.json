@@ -1,0 +1,15 @@
+{
+  "inputs": [],
+  "servers": {
+    "employee-mcp-2026": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "employee-mcp\\employee-mcp.csproj"
+      ],
+      "env": {}
+    }
+  }
+}
