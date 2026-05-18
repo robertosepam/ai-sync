@@ -11,6 +11,9 @@
   <Folder Name="/Infrastructure/">
     <Project Path="src/AiSync.Infrastructure/AiSync.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/MCP/">
+    <Project Path="employee-mcp/employee-mcp.csproj" Id="c91d8991-0676-43a9-bc45-97bfd0df7f82" />
+  </Folder>
   <Folder Name="/Tests/">
     <Project Path="src/AISync.UnitTests/AiSync.API.Tests/AiSync.API.Tests.csproj" />
     <Project Path="src/AISync.UnitTests/AiSync.Application.Tests/AiSync.Application.Tests.csproj" />
