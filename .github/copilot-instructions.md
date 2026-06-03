@@ -15,6 +15,7 @@ Copilot applies them automatically based on the files you are editing (controlle
 | Architecture | [skills/architecture.instructions.md](skills/architecture.instructions.md) | Entire backend |
 | API Style | [skills/api-style.instructions.md](skills/api-style.instructions.md) | Controllers |
 | Domain Rules | [skills/entity-rules.instructions.md](skills/entity-rules.instructions.md) | Entities, DTOs, Repositories |
+| Constitution | [skills/constitution.instructions.md](skills/constitution.instructions.md) | Entire backend |
 
 ## How to add a new skill
 1. Create a file at `.github/skills/<name>.instructions.md`

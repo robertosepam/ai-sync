@@ -6,4 +6,6 @@ public class Employee
     public string Name { get; set; } = string.Empty;
     public DateTime DateOfBirth { get; set; }
     public bool IsActive { get; set; }
+
+    public ICollection<Project> Projects { get; set; } = new List<Project>();
 }
