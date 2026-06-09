@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "name": "Sync Docs on Source Change",
+  "description": "When any C# source file, project file, or config file changes, asks the agent to update the README or /docs folder to reflect the changes.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.cs",
+      "**/*.csproj",
+      "**/appsettings*.json",
+      "**/Program.cs",
+      "**/*.slnx"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A source file was just edited. Review the change and update the documentation accordingly. Check if there is a /docs folder in the repository — if so, update the relevant doc files there. Otherwise, update the README.md at the root of the repository. Only update documentation that is affected by the change (e.g. new endpoints, changed DTOs, new entities, updated configuration). Keep the docs concise and accurate."
+  }
+}
